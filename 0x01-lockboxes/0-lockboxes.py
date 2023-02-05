@@ -29,12 +29,6 @@ def canUnlockAll(boxes):
         if key < len(unlockableBoxes):
             unlockableBoxes[key] = 1
             unlockableBoxes = recursiveUnlock(boxes, key, unlockableBoxes)
-    # for i in range(len(boxes)):
-     #   for box in boxes:
-      #      if unlockableBoxes[boxes.index(box)] == 1:
-       #         for key in box:
-        #            if key < len(unlockableBoxes):
-         #               unlockableBoxes[key] = 1
 
     for key in unlockableBoxes:
         if key != 1:
