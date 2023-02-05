@@ -22,12 +22,12 @@ def canUnlockAll(boxes):
         Returns: True or False
     """
     unlockableBoxes = []
-    for box in boxes:
-        unlockableBoxes.append(0)
-    unlockableBoxes[0] = 1
     if ((len(set(boxes[0])) == len(boxes)) and (
             max(boxes[0]) == len(boxes) - 1)):
         return True
+    for box in boxes:
+        unlockableBoxes.append(0)
+    unlockableBoxes[0] = 1
     for key in boxes[0]:
         if key < len(unlockableBoxes):
             unlockableBoxes[key] = 1
