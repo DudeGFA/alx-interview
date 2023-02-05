@@ -21,7 +21,8 @@ def canUnlockAll(boxes):
         for box in boxes:
             if unlockableBoxes[boxes.index(box)] == 1:
                 for key in box:
-                    unlockableBoxes[key] = 1
+                    if key < len(unlockableBoxes):
+                        unlockableBoxes[key] = 1
 
     for key in unlockableBoxes:
         if key != 1:
