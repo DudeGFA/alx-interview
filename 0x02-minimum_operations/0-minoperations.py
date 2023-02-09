@@ -12,6 +12,7 @@ def minOperations(n: int) -> int:
     """
     if (n <= 1):
         return 0
+    res = 0
     i = 2
     while (i <= n):
         while(n % i == 0):
