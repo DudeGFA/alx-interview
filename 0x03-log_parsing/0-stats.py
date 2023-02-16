@@ -3,7 +3,7 @@
     reads stdin line by line
     and computes metrics
 """
-import sys
+from sys import stdin
 line_count = 1
 
 status_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
@@ -22,7 +22,7 @@ def print_statistics():
 
 
 try:
-    for line in sys.stdin:
+    for line in stdin:
         line_count += 1
         split_line = line.split()
         try:
