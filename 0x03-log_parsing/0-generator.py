@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+'''test script'''
 import random
 import sys
 from time import sleep
