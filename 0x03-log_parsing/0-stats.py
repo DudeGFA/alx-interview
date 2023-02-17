@@ -15,6 +15,7 @@ total_file_size = 0
 def print_statistics():
     """
         Prints log statistics
+        at intervals of 10
     """
     print("File size: " + str(total_file_size))
     for key, value in status_codes.items():
