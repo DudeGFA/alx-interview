@@ -25,14 +25,14 @@ try:
         total_file_size += file_size
         if line_count % 10 == 0:
             print("File size: " + str(total_file_size))
-            for key, value in status_codes.items():
+            for key, value in sorted(status_codes.items()):
                 if value != 0:
                     print("{}: {}".format(key, value))
 except BaseException:
     pass
 finally:
     print("File size: " + str(total_file_size))
-    for key, value in status_codes.items():
+    for key, value in sorted(status_codes.items()):
         if value != 0:
             print("{}: {}".format(key, value))
     raise
