@@ -37,7 +37,7 @@ try:
         total_file_size += file_size
         if line_count % 10 == 0:
             print_statistics()
-        print_statistics
+        print_statistics()
 except KeyboardInterrupt:
-    print_statistics
+    print_statistics()
     raise
