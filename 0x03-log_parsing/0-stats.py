@@ -28,11 +28,9 @@ try:
             for key, value in status_codes.items():
                 if value != 0:
                     print("{}: {}".format(key, value))
-    print("File size: " + str(total_file_size))
-    for key, value in status_codes.items():
-        if value != 0:
-            print("{}: {}".format(key, value))
-except KeyboardInterrupt:
+except BaseException:
+    pass
+finally:
     print("File size: " + str(total_file_size))
     for key, value in status_codes.items():
         if value != 0:
