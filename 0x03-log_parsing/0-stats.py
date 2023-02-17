@@ -9,17 +9,6 @@ status_codes = {"200": 0, "301": 0, "400": 0, "401": 0,
 total_file_size = 0
 
 
-def print_statistics():
-    """
-        Prints log statistics
-        at intervals of 10
-    """
-    print("File size: " + str(total_file_size))
-    for key, value in status_codes.items():
-        if value != 0:
-            print(f"{key}: {value}")
-
-
 try:
     for line in stdin:
         line_count += 1
@@ -35,8 +24,17 @@ try:
             pass
         total_file_size += file_size
         if line_count % 10 == 0:
-            print_statistics()
-    print_statistics()
+            print("File size: " + str(total_file_size))
+            for key, value in status_codes.items():
+                if value != 0:
+                    print(f"{key}: {value}")
+    print("File size: " + str(total_file_size))
+    for key, value in status_codes.items():
+        if value != 0:
+            print(f"{key}: {value}")
 except KeyboardInterrupt:
-    print_statistics()
+    print("File size: " + str(total_file_size))
+    for key, value in status_codes.items():
+        if value != 0:
+            print(f"{key}: {value}")
     raise
