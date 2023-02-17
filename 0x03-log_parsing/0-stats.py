@@ -27,14 +27,14 @@ try:
             print("File size: " + str(total_file_size))
             for key, value in status_codes.items():
                 if value != 0:
-                    print(f"{key}: {value}")
+                    print("{}: {}".format(key, value))
     print("File size: " + str(total_file_size))
     for key, value in status_codes.items():
         if value != 0:
-            print(f"{key}: {value}")
+            print("{}: {}".format(key, value))
 except KeyboardInterrupt:
     print("File size: " + str(total_file_size))
     for key, value in status_codes.items():
         if value != 0:
-            print(f"{key}: {value}")
+            print("{}: {}".format(key, value))
     raise
