@@ -34,7 +34,7 @@ def isValid(ROW, COL, board, board_size):
 def findsolution(row, board, board_size):
     """
         Finds possible solution
-        to the problem of n queens
+        to n queens coding challenge
     """
     if row >= board_size:
         return
