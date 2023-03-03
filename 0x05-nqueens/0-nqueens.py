@@ -2,7 +2,7 @@
 """
         Solves n queens programing problem
         using backtracking algorithm
-    """
+"""
 import sys
 
 
