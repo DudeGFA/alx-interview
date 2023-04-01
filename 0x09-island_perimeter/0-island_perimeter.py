@@ -17,13 +17,15 @@ def island_perimeter(grid):
             if grid[i][j] == 1:
                 perimeter += 3
                 try:
-                    if grid[i - 1][j] == 1:
+                    if i > 0 and grid[i - 1][j] == 1:
                         perimeter -= 1
                 except IndexError:
                     pass
                 try:
-                    if grid[i][j - 1] == 1:
+                    if j > 0 and grid[i][j - 1] == 1:
                         perimeter -= 1
                 except IndexError:
                     pass
+    if (perimeter == 0):
+        return 0
     return perimeter + 1
