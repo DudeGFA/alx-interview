@@ -47,6 +47,8 @@ def isWinner(x, nums):
     Ben = 0
     Maria = 0
     for idx in range(x):
+        if nums[idx] < 1:
+            continue
         winner = 0
         num_range = [i for i in range(1, nums[idx] + 1)]
         num_copy = list(num_range)
