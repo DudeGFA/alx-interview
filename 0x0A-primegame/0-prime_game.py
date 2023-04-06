@@ -41,11 +41,14 @@ def isWinner(x, nums):
             Winner of prime game if one exists
             otherwise None
     """
+    if x is None or x == 0 or nums is None or nums == []:
+        return None
+
     Ben = 0
     Maria = 0
-    for num in nums:
+    for idx in range(x):
         winner = 0
-        num_range = [i for i in range(1, num + 1)]
+        num_range = [i for i in range(1, nums[idx] + 1)]
         num_copy = list(num_range)
         for j in num_range:
             if j in num_copy:
@@ -62,10 +65,10 @@ def isWinner(x, nums):
                     # print(str(j) + ' is not prime!')
         if (winner % 2) == 0:
             Ben += 1
-            # print('ben won round ', num)
+            # print('ben won round ', nums[idx])
         else:
             Maria += 1
-            # print('maria won round ', num)
+            # print('maria won round ', nums[idx])
     if Maria > Ben:
         return 'Maria'
     elif Ben > Maria:
