@@ -50,22 +50,22 @@ def isWinner(x, nums):
         for j in num_range:
             if j in num_copy:
                 if isPrime(j):
-                    print(str(j) + ' is prime!')
+                    # print(str(j) + ' is prime!')
                     winner += 1
                     for no in list(num_copy):
                         if (no % j == 0):
-                            print(j, no)
-                            print(num_copy)
+                            # print(j, no)
+                            # print(num_copy)
                             num_copy.remove(no)
-                            print(num_copy)
-                else:
-                    print(str(j) + ' is not prime!')
+                            # print(num_copy)
+                # else:
+                    # print(str(j) + ' is not prime!')
         if (winner % 2) == 0:
             Ben += 1
-            print('ben won round ', num)
+            # print('ben won round ', num)
         else:
             Maria += 1
-            print('maria won round ', num)
+            # print('maria won round ', num)
     if Maria > Ben:
         return 'Maria'
     elif Ben > Maria:
